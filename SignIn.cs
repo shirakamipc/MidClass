@@ -13,6 +13,8 @@ namespace MidClass
 	public partial class SignIn : Form
 	{
 		DBAccess dBAccess = new DBAccess();
+
+		DataTable dtUser = new DataTable();
 		public SignIn()
 		{
 			InitializeComponent();
@@ -42,8 +44,27 @@ namespace MidClass
 			}
 			else
 			{
-				string query = "select id from Users where Users.UName = '"+ uname + "'and Users.Password =' "+pword+"'";
+				string query = "select * from Users where Users.UName = '"+ uname + "'and Users.Password =' "+pword+"'";
 
+				dBAccess.readDatathroughAdapter(query, dtUser);
+
+				if (dtUser.Rows.Count == 0)
+				{
+					MessageBox.Show("Your username or password is wrong");
+				}
+				else if(dtUser.Rows.Count > 1)
+				{
+					//push to error log
+				}
+				if (dtUser.Rows.Count == 1)
+				{
+					MessageBox.Show("Log in completed");
+					dBAccess.closeConn();
+
+					this.Hide();
+					// need hompage HomePage home = new HomePage();
+					//              home.Show();
+				}
 			}
 		}
 	}
