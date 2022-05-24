@@ -44,7 +44,7 @@ namespace MidClass
 			}
 			else
 			{
-				string query = "select * from Users where Users.UName = '"+ uname + "'and Users.Password =' "+pword+"'";
+				string query = "use EndClass;select * from Users where Users.UName = '" + uname + "'and Users.Password ='"+pword+"'";//sql injection
 
 				dBAccess.readDatathroughAdapter(query, dtUser);
 
