@@ -56,7 +56,7 @@ namespace MidClass
 				{
 					//push to error log
 				}
-				if (dtUser.Rows.Count == 1)
+				if (dtUser.Rows.Count >= 1)
 				{
 					MessageBox.Show("Log in completed");
 					dBAccess.closeConn();
