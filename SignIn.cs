@@ -12,12 +12,19 @@ namespace MidClass
 {
 	public partial class SignIn : Form
 	{
+		public static string uId, uName, mail,pWord; //display user information 
+		
 		DBAccess dBAccess = new DBAccess();
 
 		DataTable dtUser = new DataTable();
 		public SignIn()
 		{
 			InitializeComponent();
+		}
+
+		private void SignIn_Load(object sender, EventArgs e)
+		{
+
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -58,12 +65,24 @@ namespace MidClass
 				}
 				if (dtUser.Rows.Count >= 1)
 				{
+					uId = dtUser.Rows[0]["UId"].ToString();
+					uName = dtUser.Rows[0]["UName"].ToString();
+					mail  = dtUser.Rows[0]["Mail"].ToString();
+					pWord = dtUser.Rows[0]["Password"].ToString();
+
 					MessageBox.Show("Log in completed");
 					dBAccess.closeConn();
 
 					this.Hide();
-					// need hompage HomePage home = new HomePage();
-					//              home.Show();
+					if (uId.Equals("1"))
+					{
+						AdController home = new AdController();
+						home.Show();
+					}
+					else
+					{
+						MessageBox.Show("This is not admin account \n Please use admin account or use web login");
+					}
 				}
 			}
 		}
