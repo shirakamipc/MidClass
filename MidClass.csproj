@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OpenUrl.cs" />
     <Compile Include="DBAcess.cs" />
     <Compile Include="AdController.cs">
       <SubType>Form</SubType>
