@@ -35,7 +35,7 @@ namespace MidClass
 			this.label3 = new System.Windows.Forms.Label();
 			this.unametxt = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.ChangeAccount = new System.Windows.Forms.Button();
+			this.AccSetting = new System.Windows.Forms.Button();
 			this.AllProducts = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -97,20 +97,20 @@ namespace MidClass
 			this.label2.TabIndex = 13;
 			this.label2.Text = "User Name";
 			// 
-			// ChangeAccount
+			// AccSetting
 			// 
-			this.ChangeAccount.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ChangeAccount.Location = new System.Drawing.Point(23, 278);
-			this.ChangeAccount.Name = "ChangeAccount";
-			this.ChangeAccount.Size = new System.Drawing.Size(169, 34);
-			this.ChangeAccount.TabIndex = 19;
-			this.ChangeAccount.Text = "Account setting";
-			this.ChangeAccount.UseVisualStyleBackColor = true;
+			this.AccSetting.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.AccSetting.Location = new System.Drawing.Point(234, 228);
+			this.AccSetting.Name = "AccSetting";
+			this.AccSetting.Size = new System.Drawing.Size(169, 34);
+			this.AccSetting.TabIndex = 19;
+			this.AccSetting.Text = "Account setting";
+			this.AccSetting.UseVisualStyleBackColor = true;
 			// 
 			// AllProducts
 			// 
 			this.AllProducts.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AllProducts.Location = new System.Drawing.Point(277, 228);
+			this.AllProducts.Location = new System.Drawing.Point(459, 228);
 			this.AllProducts.Name = "AllProducts";
 			this.AllProducts.Size = new System.Drawing.Size(183, 34);
 			this.AllProducts.TabIndex = 20;
@@ -123,7 +123,7 @@ namespace MidClass
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.AllProducts);
-			this.Controls.Add(this.ChangeAccount);
+			this.Controls.Add(this.AccSetting);
 			this.Controls.Add(this.AllUsers);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.mailtxt);
@@ -132,6 +132,7 @@ namespace MidClass
 			this.Controls.Add(this.label2);
 			this.Name = "AdController";
 			this.Text = "Admin Controller";
+			this.Load += new System.EventHandler(this.AdController_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -145,7 +146,7 @@ namespace MidClass
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox unametxt;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button ChangeAccount;
+		private System.Windows.Forms.Button AccSetting;
 		private System.Windows.Forms.Button AllProducts;
 	}
 }

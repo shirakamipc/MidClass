@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllUsers.Designer.cs">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenUrl.cs" />
     <Compile Include="DBAcess.cs" />
     <Compile Include="AdController.cs">
@@ -64,6 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdController.resx">
       <DependentUpon>AdController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUsers.resx">
+      <DependentUpon>AllUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>

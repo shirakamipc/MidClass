@@ -12,9 +12,29 @@ namespace MidClass
 {
 	public partial class AdController : Form
 	{
+		DBAccess dBAccess = new DBAccess();
+
+		DataTable dtUsers = new DataTable();
+
+		string query;
+
+		private void AllUsers_Click(object sender,EventArgs e)
+		{
+			AllUsers users = new AllUsers();
+			users.Show();
+		}
+
 		public AdController()
 		{
 			InitializeComponent();
+			AllUsers.Click += new EventHandler(AllUsers_Click) ;
 		}
+
+		private void AdController_Load(object sender, EventArgs e)
+		{
+			unametxt.Text = SignIn.uName;
+			mailtxt.Text = SignIn.mail;
+		}
+
 	}
 }
