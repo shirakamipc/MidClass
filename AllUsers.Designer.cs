@@ -73,7 +73,7 @@ namespace MidClass
 			this.testb.TabIndex = 15;
 			this.testb.Text = "button1";
 			this.testb.UseVisualStyleBackColor = true;
-			this.testb.Click += new System.EventHandler(this.Testb_Click);
+			this.testb.Click += new System.EventHandler(this.testb_Click);
 			// 
 			// AllUsers
 			// 
