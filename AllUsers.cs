@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace MidClass
 {
@@ -27,7 +29,7 @@ namespace MidClass
 		private void AllUsers_Load(object sender, EventArgs e)
 		{
 			
-			string query = "use EndClass;select * from dbo.Users";//where UId > " + (((index-1)*5).ToString()) + "and UId <=" + ((index * 5).ToString());
+			string query = "select * from EndClass.dbo.Users";//where UId > " + (((index-1)*5).ToString()) + "and UId <=" + ((index * 5).ToString());
 			dBAccess.readDatathroughAdapter(query, dtUsers);
 			dataGridView1.DataSource = dtUsers;
 			
@@ -41,7 +43,7 @@ namespace MidClass
 
 		private void UpdateUsers_Click_1(object sender, EventArgs e)
 		{
-			string query = "use EndClass;select * from Users";
+			string query = "select * from EndClass.dbo.Users";
 			int changes = dBAccess.executeDataAdapter(dtUsers, query);
 			MessageBox.Show("There is " + changes +" changes");
 		}

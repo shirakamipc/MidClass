@@ -16,7 +16,7 @@ namespace MidClass
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new AllUsers());
+			Application.Run(new SignIn());
 		}
 	}
 }
