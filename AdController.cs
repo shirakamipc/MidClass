@@ -29,8 +29,11 @@ namespace MidClass
 		{
 			unametxt.Text = SignIn.uName;
 			mailtxt.Text = SignIn.mail;
-			//SignIn.Close();
 		}
 
+		private void AllProducts_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

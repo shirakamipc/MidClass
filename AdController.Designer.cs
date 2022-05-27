@@ -35,7 +35,6 @@ namespace MidClass
 			this.label3 = new System.Windows.Forms.Label();
 			this.unametxt = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.AccSetting = new System.Windows.Forms.Button();
 			this.AllProducts = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -97,16 +96,6 @@ namespace MidClass
 			this.label2.TabIndex = 13;
 			this.label2.Text = "User Name";
 			// 
-			// AccSetting
-			// 
-			this.AccSetting.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AccSetting.Location = new System.Drawing.Point(234, 228);
-			this.AccSetting.Name = "AccSetting";
-			this.AccSetting.Size = new System.Drawing.Size(169, 34);
-			this.AccSetting.TabIndex = 19;
-			this.AccSetting.Text = "Account setting";
-			this.AccSetting.UseVisualStyleBackColor = true;
-			// 
 			// AllProducts
 			// 
 			this.AllProducts.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,6 +105,7 @@ namespace MidClass
 			this.AllProducts.TabIndex = 20;
 			this.AllProducts.Text = "See All Products";
 			this.AllProducts.UseVisualStyleBackColor = true;
+			this.AllProducts.Click += new System.EventHandler(this.AllProducts_Click);
 			// 
 			// AdController
 			// 
@@ -123,7 +113,6 @@ namespace MidClass
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.AllProducts);
-			this.Controls.Add(this.AccSetting);
 			this.Controls.Add(this.AllUsers);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.mailtxt);
@@ -146,7 +135,6 @@ namespace MidClass
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox unametxt;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button AccSetting;
 		private System.Windows.Forms.Button AllProducts;
 	}
 }

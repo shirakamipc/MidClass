@@ -40,13 +40,13 @@ namespace MidClass
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(43, 35);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(383, 273);
+			this.dataGridView1.Size = new System.Drawing.Size(548, 273);
 			this.dataGridView1.TabIndex = 0;
 			// 
 			// UpdateUsers
 			// 
 			this.UpdateUsers.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.UpdateUsers.Location = new System.Drawing.Point(43, 340);
+			this.UpdateUsers.Location = new System.Drawing.Point(122, 327);
 			this.UpdateUsers.Name = "UpdateUsers";
 			this.UpdateUsers.Size = new System.Drawing.Size(383, 40);
 			this.UpdateUsers.TabIndex = 3;
@@ -58,7 +58,7 @@ namespace MidClass
 			// 
 			this.Title.AutoSize = true;
 			this.Title.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Title.Location = new System.Drawing.Point(155, 9);
+			this.Title.Location = new System.Drawing.Point(237, 9);
 			this.Title.Name = "Title";
 			this.Title.Size = new System.Drawing.Size(151, 22);
 			this.Title.TabIndex = 14;
@@ -68,7 +68,7 @@ namespace MidClass
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(474, 393);
+			this.ClientSize = new System.Drawing.Size(628, 393);
 			this.Controls.Add(this.Title);
 			this.Controls.Add(this.UpdateUsers);
 			this.Controls.Add(this.dataGridView1);

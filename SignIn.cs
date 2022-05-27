@@ -82,7 +82,7 @@ namespace MidClass
 					}
 					else
 					{
-						MessageBox.Show("This is not admin account \n Please use admin account or use web login");
+						MessageBox.Show("This is not admin account \n You will be directed to web browser");
 					}
 				}
 			}
