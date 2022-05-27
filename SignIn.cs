@@ -77,6 +77,7 @@ namespace MidClass
 					if (uId.Equals("1"))
 					{
 						AdController home = new AdController();
+						home.Closed += (s, args) => this.Close();
 						home.Show();
 					}
 					else

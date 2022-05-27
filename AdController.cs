@@ -29,6 +29,7 @@ namespace MidClass
 		{
 			unametxt.Text = SignIn.uName;
 			mailtxt.Text = SignIn.mail;
+			//SignIn.Close();
 		}
 
 	}

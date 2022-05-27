@@ -48,10 +48,6 @@ namespace MidClass
 			MessageBox.Show("There is " + changes +" changes");
 		}
 
-		private void testb_Click(object sender, EventArgs e)
-		{
-			Form1 test = new Form1();
-			test.Show();
-		}
+
 	}
 }

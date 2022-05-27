@@ -32,7 +32,6 @@ namespace MidClass
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.UpdateUsers = new System.Windows.Forms.Button();
 			this.Title = new System.Windows.Forms.Label();
-			this.testb = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -65,22 +64,11 @@ namespace MidClass
 			this.Title.TabIndex = 14;
 			this.Title.Text = "List of all users";
 			// 
-			// testb
-			// 
-			this.testb.Location = new System.Drawing.Point(399, 314);
-			this.testb.Name = "testb";
-			this.testb.Size = new System.Drawing.Size(75, 23);
-			this.testb.TabIndex = 15;
-			this.testb.Text = "button1";
-			this.testb.UseVisualStyleBackColor = true;
-			this.testb.Click += new System.EventHandler(this.testb_Click);
-			// 
 			// AllUsers
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(474, 393);
-			this.Controls.Add(this.testb);
 			this.Controls.Add(this.Title);
 			this.Controls.Add(this.UpdateUsers);
 			this.Controls.Add(this.dataGridView1);
@@ -98,6 +86,5 @@ namespace MidClass
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button UpdateUsers;
 		private System.Windows.Forms.Label Title;
-		private System.Windows.Forms.Button testb;
 	}
 }
