@@ -12,11 +12,6 @@ namespace MidClass
 {
 	public partial class AdController : Form
 	{
-		DBAccess dBAccess = new DBAccess();
-
-		DataTable dtUsers = new DataTable();
-
-		string query;
 
 		private void AllUsers_Click(object sender,EventArgs e)
 		{

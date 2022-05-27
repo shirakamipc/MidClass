@@ -30,9 +30,9 @@ namespace MidClass
 		private void InitializeComponent()
 		{
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.Previous = new System.Windows.Forms.Button();
-			this.Next = new System.Windows.Forms.Button();
 			this.UpdateUsers = new System.Windows.Forms.Button();
+			this.Title = new System.Windows.Forms.Label();
+			this.testb = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -41,61 +41,63 @@ namespace MidClass
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(43, 35);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(638, 273);
+			this.dataGridView1.Size = new System.Drawing.Size(383, 273);
 			this.dataGridView1.TabIndex = 0;
-			// 
-			// Previous
-			// 
-			this.Previous.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Previous.Location = new System.Drawing.Point(43, 340);
-			this.Previous.Name = "Previous";
-			this.Previous.Size = new System.Drawing.Size(143, 40);
-			this.Previous.TabIndex = 1;
-			this.Previous.Text = "Previous Users";
-			this.Previous.UseVisualStyleBackColor = true;
-			// 
-			// Next
-			// 
-			this.Next.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Next.Location = new System.Drawing.Point(538, 340);
-			this.Next.Name = "Next";
-			this.Next.Size = new System.Drawing.Size(143, 40);
-			this.Next.TabIndex = 2;
-			this.Next.Text = "Next Users";
-			this.Next.UseVisualStyleBackColor = true;
 			// 
 			// UpdateUsers
 			// 
 			this.UpdateUsers.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.UpdateUsers.Location = new System.Drawing.Point(283, 340);
+			this.UpdateUsers.Location = new System.Drawing.Point(43, 340);
 			this.UpdateUsers.Name = "UpdateUsers";
-			this.UpdateUsers.Size = new System.Drawing.Size(143, 40);
+			this.UpdateUsers.Size = new System.Drawing.Size(383, 40);
 			this.UpdateUsers.TabIndex = 3;
 			this.UpdateUsers.Text = "Update Users";
 			this.UpdateUsers.UseVisualStyleBackColor = true;
+			this.UpdateUsers.Click += new System.EventHandler(this.UpdateUsers_Click_1);
+			// 
+			// Title
+			// 
+			this.Title.AutoSize = true;
+			this.Title.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Title.Location = new System.Drawing.Point(155, 9);
+			this.Title.Name = "Title";
+			this.Title.Size = new System.Drawing.Size(151, 22);
+			this.Title.TabIndex = 14;
+			this.Title.Text = "List of all users";
+			// 
+			// testb
+			// 
+			this.testb.Location = new System.Drawing.Point(399, 314);
+			this.testb.Name = "testb";
+			this.testb.Size = new System.Drawing.Size(75, 23);
+			this.testb.TabIndex = 15;
+			this.testb.Text = "button1";
+			this.testb.UseVisualStyleBackColor = true;
+			this.testb.Click += new System.EventHandler(this.Testb_Click);
 			// 
 			// AllUsers
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(474, 393);
+			this.Controls.Add(this.testb);
+			this.Controls.Add(this.Title);
 			this.Controls.Add(this.UpdateUsers);
-			this.Controls.Add(this.Next);
-			this.Controls.Add(this.Previous);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "AllUsers";
 			this.Text = "AllUsers";
 			this.Load += new System.EventHandler(this.AllUsers_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.Button Previous;
-		private System.Windows.Forms.Button Next;
 		private System.Windows.Forms.Button UpdateUsers;
+		private System.Windows.Forms.Label Title;
+		private System.Windows.Forms.Button testb;
 	}
 }

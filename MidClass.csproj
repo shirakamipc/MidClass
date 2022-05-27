@@ -52,6 +52,12 @@
     <Compile Include="AllUsers.Designer.cs">
       <DependentUpon>AllUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenUrl.cs" />
     <Compile Include="DBAcess.cs" />
     <Compile Include="AdController.cs">
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllUsers.resx">
       <DependentUpon>AllUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>

@@ -15,39 +15,41 @@ namespace MidClass
 		public AllUsers()
 		{
 			InitializeComponent();
-			UpdateUsers.Click += new EventHandler(UpdateUsers_Click);
 		}
 
-		private void UpdateUsers_Click(object sender, EventArgs e)
-		{
-			//throw new NotImplementedException();
-		}
 
 		
 
 		DBAccess dBAccess = new DBAccess();
 
-		DataTable dtUsers = new DataTable();
-
-		string query;
-		
-		int index = 1;
+		public static DataTable dtUsers = new DataTable();
 		
 		private void AllUsers_Load(object sender, EventArgs e)
 		{
 			
-			query = "use EndClass;select * from dbo.Users ";//where UId > " + (((index-1)*5).ToString()) + "and UId <=" + ((index * 5).ToString());
+			string query = "use EndClass;select * from dbo.Users";//where UId > " + (((index-1)*5).ToString()) + "and UId <=" + ((index * 5).ToString());
 			dBAccess.readDatathroughAdapter(query, dtUsers);
 			dataGridView1.DataSource = dtUsers;
 			
 			for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
 			{
 				dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
 			}
 
 			dBAccess.closeConn();
 		}
 
+		private void UpdateUsers_Click_1(object sender, EventArgs e)
+		{
+			string query = "use EndClass;select * from Users";
+			int changes = dBAccess.executeDataAdapter(dtUsers, query);
+			MessageBox.Show("There is " + changes +" changes");
+		}
+
+		private void testb_Click(object sender, EventArgs e)
+		{
+			Form1 test = new Form1();
+			test.Show();
+		}
 	}
 }
