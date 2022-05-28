@@ -21,7 +21,7 @@ namespace MidClass
 		DataTable dtProducts = new DataTable();
 		private void AllProducts_Load(object sender, EventArgs e)
 		{
-			string query = "select * from EndClass.dbo.Users";
+			string query = "select * from EndClass.dbo.Product";
 			dBAccess.readDatathroughAdapter(query, dtProducts);
 			productsGridView.DataSource = dtProducts;
 
@@ -31,6 +31,13 @@ namespace MidClass
 			}
 
 			dBAccess.closeConn();
+		}
+
+		private void ChangeProducts_Click(object sender, EventArgs e)
+		{
+			string query = "select * from EndClass.dbo.Product";
+			int changes = dBAccess.executeDataAdapter(dtProducts, query);
+			MessageBox.Show("There is " + changes + " changes");
 		}
 	}
 }

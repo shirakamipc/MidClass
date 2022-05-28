@@ -55,6 +55,7 @@ namespace MidClass
 			this.ChangeProducts.TabIndex = 16;
 			this.ChangeProducts.Text = "Change Products";
 			this.ChangeProducts.UseVisualStyleBackColor = true;
+			this.ChangeProducts.Click += new System.EventHandler(this.ChangeProducts_Click);
 			// 
 			// productsGridView
 			// 
