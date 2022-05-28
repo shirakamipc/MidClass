@@ -108,5 +108,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Save Image to Sql Server\Save Image to Sql Server\Save Image to Sql Server\Save Image to Sql Server.csproj">
+      <Project>{a5dfbf96-9457-40c0-b005-d06325dd4d50}</Project>
+      <Name>Save Image to Sql Server</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
