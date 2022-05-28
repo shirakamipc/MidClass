@@ -71,7 +71,7 @@ namespace MidClass
         }
 
 
-        public void readDatathroughAdapter(string query, DataTable tblName)
+        public SqlDataAdapter readDatathroughAdapter(string query, DataTable tblName)
         {
             try
             {
@@ -91,6 +91,7 @@ namespace MidClass
             {
                 throw ex;
             }
+            return adapter;
         }
 
 

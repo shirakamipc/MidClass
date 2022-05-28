@@ -17,7 +17,7 @@ using System.Windows.Forms;
 //Date : 12-Oct-2016
 //Description : Save Image to Sql Server using C#
 
-namespace Save_Image_to_Sql_Server
+namespace MidClass
 {
     public partial class frmMain : Form
     {
@@ -29,6 +29,8 @@ namespace Save_Image_to_Sql_Server
         Byte[] ImageByteArray;
         //before executing -create database with given script - change connection string according to yours
         SqlConnection sqlcon = new SqlConnection("Data Source=\"localhost, 1433\";User ID=sa;Password=\"Database 2019\";Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        DBAccess dBAccess = new DBAccess();
+        DataTable dtblImages = new DataTable();
         #endregion
 
         #region Methods
@@ -42,10 +44,12 @@ namespace Save_Image_to_Sql_Server
         {
             if (sqlcon.State == ConnectionState.Closed)
                 sqlcon.Open();
-            SqlDataAdapter sqlda = new SqlDataAdapter("ImageViewAll", sqlcon);
+           
+            string query = "select iid,iname,iimg from EndClass.dbo.image_t";
+            SqlDataAdapter sqlda = dBAccess.readDatathroughAdapter(query, dtblImages);
             sqlda.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataTable dtblImages = new DataTable();
-            sqlda.Fill(dtblImages);
+            
+            //sqlda.Fill(dtblImages);
             dgvImages.DataSource = dtblImages;
             dgvImages.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvImages.Columns[2].Visible = false;
@@ -83,19 +87,21 @@ namespace Save_Image_to_Sql_Server
                     if (ImageByteArray.Length != 0)
                         ImageByteArray = new byte[] { };
                 }
-                else
+                else //there is an img
                 {
-                    Image temp = new Bitmap(strFilePath);
+                    Image temp = new Bitmap(strFilePath);//img is here as bitmap
                     MemoryStream strm = new MemoryStream();
                     temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
                     ImageByteArray = strm.ToArray();
                 }
+                
+                // exeDataAdapter
                 if (sqlcon.State == ConnectionState.Closed)
                     sqlcon.Open();
                 SqlCommand sqlCmd = new SqlCommand("ImageAddOrEdit", sqlcon) { CommandType = CommandType.StoredProcedure };
-                sqlCmd.Parameters.Add("@ImageID", ImageID);
-                sqlCmd.Parameters.Add("@Title", txtTitle.Text.Trim());
-                sqlCmd.Parameters.Add("@Image", ImageByteArray);
+                sqlCmd.Parameters.AddWithValue("@iid", ImageID);
+                sqlCmd.Parameters.AddWithValue("@iname", txtTitle.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@iimg", ImageByteArray);
                 sqlCmd.ExecuteNonQuery();
                 sqlcon.Close();
                 MessageBox.Show("Saved successfuly");
