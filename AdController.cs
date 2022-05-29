@@ -33,7 +33,8 @@ namespace MidClass
 
 		private void AllProducts_Click(object sender, EventArgs e)
 		{
-
+			Allproducts2 allproducts2 = new Allproducts2();
+			allproducts2.Show();
 		}
 	}
 }

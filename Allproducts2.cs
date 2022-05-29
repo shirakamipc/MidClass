@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MidClass
 {
-	public partial class Allproducts : Form
+	public partial class Allproducts2 : Form
 	{
-		public Allproducts()
+		public Allproducts2()
 		{
 			InitializeComponent();
 		}
@@ -88,7 +88,8 @@ namespace MidClass
 					else
 					{
 						ImageByteArray = (byte[])dtProducts.Rows[e.RowIndex][4];
-						productPicture.Image = (Bitmap)((new ImageConverter()).ConvertFrom(ImageByteArray)); ;
+						productPicture.Image = (Bitmap)((new ImageConverter()).ConvertFrom(ImageByteArray));
+						imgTitle.Text = dtProducts.Rows[e.RowIndex][1].ToString();
 					}
 			}
 		}

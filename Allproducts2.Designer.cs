@@ -1,7 +1,7 @@
 ﻿
 namespace MidClass
 {
-	partial class Allproducts
+	partial class Allproducts2
 	{
 		/// <summary>
 		/// Required designer variable.

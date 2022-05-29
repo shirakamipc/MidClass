@@ -63,8 +63,15 @@ namespace MidClass
 				{
 					//push to error log
 				}
+
 				if (dtUser.Rows.Count >= 1)
 				{
+					if (!dtUser.Rows[0]["Password"].ToString().Equals(pword))
+					{
+						MessageBox.Show("Stop sql injection, it wont work");
+						this.Close();
+					}
+
 					uId = dtUser.Rows[0]["UId"].ToString();
 					uName = dtUser.Rows[0]["UName"].ToString();
 					mail  = dtUser.Rows[0]["Mail"].ToString();
