@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Allproducts2.cs">
+    <Compile Include="Allproducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Allproducts2.Designer.cs">
-      <DependentUpon>Allproducts2.cs</DependentUpon>
+    <Compile Include="Allproducts.Designer.cs">
+      <DependentUpon>Allproducts.cs</DependentUpon>
     </Compile>
     <Compile Include="AllUsers.cs">
       <SubType>Form</SubType>
@@ -65,18 +65,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSProducts.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AllProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AllProducts.Designer.cs">
-      <DependentUpon>AllProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="OpenUrl.cs" />
     <Compile Include="DBAcess.cs" />
@@ -97,17 +85,11 @@
     <EmbeddedResource Include="AdController.resx">
       <DependentUpon>AdController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllProducts.resx">
-      <DependentUpon>AllProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Allproducts2.resx">
-      <DependentUpon>Allproducts2.cs</DependentUpon>
+    <EmbeddedResource Include="Allproducts.resx">
+      <DependentUpon>Allproducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUsers.resx">
       <DependentUpon>AllUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
@@ -144,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="no_img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
