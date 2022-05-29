@@ -37,6 +37,7 @@ namespace MidClass
 			dBAccess.closeConn();
 		}
 
+		//this is in fact update products
 		private void UpdateUsers_Click(object sender, EventArgs e)
 		{
 			query = "select * from EndClass.dbo.Product";
@@ -63,7 +64,7 @@ namespace MidClass
 					temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
 					Byte[] ImageByteArray = strm.ToArray();
 
-					
+					dtProducts.Rows[e.RowIndex].SetField(4, ImageByteArray);
 				}
 			}
 		}
