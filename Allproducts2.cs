@@ -19,7 +19,7 @@ namespace MidClass
 		}
 		#region Virables
 		DBAccess dBAccess = new DBAccess();
-		public static DataTable dtProducts = new DataTable();
+		DataTable dtProducts = new DataTable();
 		String query;
 		Byte[] ImageByteArray;
 		#endregion

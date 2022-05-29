@@ -17,13 +17,9 @@ namespace MidClass
 		{
 			InitializeComponent();
 		}
-
-
-		
-
 		DBAccess dBAccess = new DBAccess();
 
-		public static DataTable dtUsers = new DataTable();
+		DataTable dtUsers = new DataTable();
 		
 		private void AllUsers_Load(object sender, EventArgs e)
 		{
@@ -31,8 +27,9 @@ namespace MidClass
 			string query = "select * from EndClass.dbo.Users";//where UId > " + (((index-1)*5).ToString()) + "and UId <=" + ((index * 5).ToString());
 			dBAccess.readDatathroughAdapter(query, dtUsers);
 			dataGridView1.DataSource = dtUsers;
+			dataGridView1.Columns[0].Visible = false;
 			
-			for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
+			for (int i = 1; i <= dataGridView1.Columns.Count - 1; i++)
 			{
 				dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 			}

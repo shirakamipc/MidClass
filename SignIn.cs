@@ -66,9 +66,9 @@ namespace MidClass
 
 				if (dtUser.Rows.Count >= 1)
 				{
-					if (!dtUser.Rows[0]["Password"].ToString().Equals(pword))
+					if (!dtUser.Rows[0]["Password"].ToString().Trim().Equals(pword))
 					{
-						MessageBox.Show("Stop sql injection, it wont work");
+						MessageBox.Show("Don't try sql injection");
 						this.Close();
 					}
 
