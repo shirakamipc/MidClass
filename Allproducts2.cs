@@ -29,9 +29,9 @@ namespace MidClass
 			query = "select * from EndClass.dbo.Product";
 			dBAccess.readDatathroughAdapter(query, dtProducts);
 			productsGrid.DataSource = dtProducts;
-			productsGrid.Columns[4].Visible = true;
+			productsGrid.Columns[0].Visible = false;
 			productPicture.Image = new Bitmap(@"..\..\no_img.png");
-			for (int i = 0; i <= productsGrid.Columns.Count - 1; i++)
+			for (int i = 1; i <= productsGrid.Columns.Count - 1; i++)
 			{
 				productsGrid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 			}
