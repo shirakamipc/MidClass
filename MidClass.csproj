@@ -46,17 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllProducts.cs">
+    <Compile Include="Allproducts2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllProducts.Designer.cs">
-      <DependentUpon>AllProducts.cs</DependentUpon>
+    <Compile Include="Allproducts2.Designer.cs">
+      <DependentUpon>Allproducts2.cs</DependentUpon>
     </Compile>
     <Compile Include="AllUsers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllUsers.Designer.cs">
       <DependentUpon>AllUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSProducts.cs">
+      <DependentUpon>DSProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AllProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllProducts.Designer.cs">
+      <DependentUpon>AllProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -86,6 +100,9 @@
     <EmbeddedResource Include="AllProducts.resx">
       <DependentUpon>AllProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Allproducts2.resx">
+      <DependentUpon>Allproducts2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllUsers.resx">
       <DependentUpon>AllUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +121,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DSProducts.xsc">
+      <DependentUpon>DSProducts.xsd</DependentUpon>
+    </None>
+    <None Include="DSProducts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProducts.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSProducts.xss">
+      <DependentUpon>DSProducts.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

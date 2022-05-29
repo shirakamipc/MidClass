@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,27 +18,48 @@ namespace MidClass
 			InitializeComponent();
 		}
 
-		DBAccess dBAccess = new DBAccess();
-		DataTable dtProducts = new DataTable();
-		private void AllProducts_Load(object sender, EventArgs e)
+		private void productBindingNavigatorSaveItem_Click(object sender, EventArgs e)
 		{
-			string query = "select * from EndClass.dbo.Product";
-			dBAccess.readDatathroughAdapter(query, dtProducts);
-			productsGridView.DataSource = dtProducts;
 
-			for (int i = 0; i <= productsGridView.Columns.Count - 1; i++)
-			{
-				productsGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-			}
-
-			dBAccess.closeConn();
 		}
 
-		private void ChangeProducts_Click(object sender, EventArgs e)
+		private void productBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
 		{
-			string query = "select * from EndClass.dbo.Product";
-			int changes = dBAccess.executeDataAdapter(dtProducts, query);
-			MessageBox.Show("There is " + changes + " changes");
+			this.Validate();
+			this.productBindingSource.EndEdit();
+			this.tableAdapterManager.UpdateAll(this.dSProducts);
+
+		}
+
+		private void AllProducts_Load(object sender, EventArgs e)
+		{
+			// TODO: This line of code loads data into the 'dSProducts.Product' table. You can move, or remove it, as needed.
+			this.productTableAdapter.Fill(this.dSProducts.Product);
+
+		}
+
+		private void productDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (e.ColumnIndex == 4)
+			{
+				OpenFileDialog ofd = new OpenFileDialog();
+				ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+				if (ofd.ShowDialog() == DialogResult.OK)
+				{
+					String strFilePath = ofd.FileName;
+					//pbxImage.Image = new Bitmap(strFilePath);
+					if (imgText.Text.Trim().Length == 0)//Auto-Fill title if is empty
+						imgText.Text = System.IO.Path.GetFileName(strFilePath);
+
+					// convert bitmap to jpeg
+					Image temp = new Bitmap(strFilePath);
+					MemoryStream strm = new MemoryStream();
+					temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+					Byte[] ImageByteArray = strm.ToArray();
+
+					//save to database
+				}
+			}
 		}
 	}
 }
