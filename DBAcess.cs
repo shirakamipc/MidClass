@@ -16,6 +16,7 @@ namespace MidClass
         private static SqlDataAdapter adapter = new SqlDataAdapter();
         public SqlTransaction DbTran;
 
+        // put connection string here
         private static string strConnString = "Data Source=\"localhost, 1433\";User ID=sa;Password=\"Database 2019\";Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
 

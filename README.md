@@ -1,7 +1,13 @@
 # MidClass
 project for midterm Database class
 use VS and MSSQL
+
 create database
-connect VS to MSSQL
-run dbo.user.sql 
-add your user, user 1 will be admin
+	execute All.sql
+	get connection string to database
+
+go to DBAcess and change strConnString to yours
+run 
+	admin : tbs
+	pword : 20200547
+do thing.

@@ -19,3 +19,6 @@ CREATE TABLE [dbo].[Product] (
     [Img]    VARBINARY (MAX) NULL,
     PRIMARY KEY CLUSTERED ([PId] ASC)
 );
+GO
+insert into Users(UName,Mail,Password)
+    values ('tbs','bhtu.work@gmail.com',20200547);
